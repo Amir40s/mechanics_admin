@@ -1,15 +1,14 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mechanics_admin/home_screen.dart';
 import 'package:mechanics_admin/provider/MenuAppController.dart';
 import 'package:mechanics_admin/provider/data_provider.dart';
 import 'package:mechanics_admin/provider/text_color_provider.dart';
 import 'package:mechanics_admin/provider/value_provider.dart';
+import 'package:mechanics_admin/screen/login/login_screen.dart';
 import 'package:provider/provider.dart';
 
 import 'firebase_options.dart';
-import 'main_screen.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,7 +36,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home:  MainScreen(),
+        home:  LoginScreen(),
       ),
     );
   }

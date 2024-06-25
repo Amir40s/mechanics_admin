@@ -6,8 +6,8 @@ import 'drawer_list_tile.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,73 +19,49 @@ class SideMenu extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
 
-            DrawerHeader(
+            const DrawerHeader(
               // child: Image.asset("assets/images/logo.png"),
               child: Center(
                   child: Text(
-                "Car Mechanics",
+                "Instant Mechanics",
                 style:
                     TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
               )),
             ),
-            Divider(
+            const Divider(
               thickness: 0.5,
               color: Colors.black,
             ),
             Padding(
-                padding: EdgeInsets.only(left: defaultPadding),
+                padding: const EdgeInsets.only(left: defaultPadding),
                 child: TextWidget(text: "Users",size: 14.0,color: Colors.black,isBold: true,)
             ),
 
-            DrawerListTile(
+            const DrawerListTile(
               index: 1,
               screenIndex: Routes.USERS,
               title: "Users",
               svgSrc: "assets/icons/menu_dashboard.svg",
             ),
-            SizedBox(
+            const SizedBox(
               height: defaultDrawerHeadHeight,
             ),
             Padding(
-                padding: EdgeInsets.only(left: defaultPadding),
-                child: TextWidget(text: "Garage Owners",size: 14.0,color: Colors.black,isBold: true,)
+                padding: const EdgeInsets.only(left: defaultPadding),
+                child: TextWidget(text: "Mechanics Owners",size: 14.0,color: Colors.black,isBold: true,)
             ),
-            SizedBox(
+            const SizedBox(
               height: defaultDrawerHeadHeight - 5,
             ),
-            DrawerListTile(
+            const DrawerListTile(
               index: 2,
               screenIndex: Routes.GARAGE,
-              title: "Garage Owners",
+              title: "Mechanics Owners",
               svgSrc: "assets/icons/menu_dashboard.svg",
             ),
 
-
-
-
-            // const DrawerListTile(
-            //   index: 9,
-            //   screenIndex: 9,
-            //   title: "P. History",
-            //   svgSrc: "assets/icons/menu_dashboard.svg",
-            // ),
-
-            // const DrawerListTile(
-            //   index: 10,
-            //   screenIndex: 10,
-            //   title: "P. Returns",
-            //   svgSrc: "assets/icons/menu_dashboard.svg",
-            // ),
-
-            // DrawerListTile(
-            //   index: 11,
-            //   screenIndex: 11,
-            //   title: "P. Returns History",
-            //   svgSrc: "assets/icons/menu_dashboard.svg",
-            // ),
-
             //Sale LIST
-            Divider(
+            const Divider(
               thickness: 0.5,
               color: Colors.black,
             ),
